@@ -489,6 +489,9 @@ header nav .form i {
   width: fit-content;
   text-transform: uppercase;
 }
+.portfolio a.more:hover {
+  background-color: #07b3e8;
+}
 /* End Portfolio */
 /* Start Video */
 .video {
@@ -954,19 +957,19 @@ header nav .form i {
   text-transform: uppercase;
   width: 130px;
 }
+.subscribe .container form input[type="submit"]:hover {
+  background-color: #07b3e8;
+}
 .subscribe form ::-webkit-input-placeholder {
   color:#fff;
 }
-
 .subscribe form ::-moz-placeholder {
   color:#fff;
   opacity: 1; /* Firefox */
 }
-
 .subscribe form ::-ms-placeholder {
   color:#fff;
 }
-
 .subscribe form ::placeholder {
   color:#fff;
 }
@@ -1028,6 +1031,9 @@ header nav .form i {
   display: flex;
   margin-left: auto; /* We can use this property if we added "display: flex;" */
   cursor: pointer;
+}
+.contact .container form input[type="submit"]:hover {
+  background-color: #07b3e8;
 }
 .contact .container .info {
   flex-basis: 25%;
