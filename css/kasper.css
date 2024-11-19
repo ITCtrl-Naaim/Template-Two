@@ -124,7 +124,7 @@ body > header {
   z-index: 2;
 }
 
-header .container {
+body > header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,7 +132,7 @@ header .container {
   min-height: 77.1px;
 }
 
-header .container::after {
+body > header .container::after {
   content: "";
   background-color: #a2a2a2;
   height: 1px;
@@ -220,15 +220,16 @@ nav ul li a.active {
 /* =============================== */
 
 /* ========== Section: Landing ========== */
-.landing {
-  background-color: var(--fallback-color);
+#landing {
   background-image: url(../images/landing.jpg);
+  background-color: var(--fallback-color);
   background-size: cover;
   height: 100vh;
   position: relative;
+  z-index: 1;
 }
 
-.landing::before {
+#landing::before {
   content: "";
   position: absolute;
   top: 0;
@@ -238,7 +239,7 @@ nav ul li a.active {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.landing .text {
+#landing .text {
   padding: 50px;
   width: 50%;
   background-color: var(--transparent-color);
@@ -254,23 +255,23 @@ nav ul li a.active {
   -o-transform: translateY(-50%);
 }
 
-.landing .content {
+#landing .content {
   width: 500px;
 }
 
-.landing .content h2 {
+#landing .content h2 {
   font-size: 32px;
   font-weight: normal;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-.landing .content p {
+#landing .content p {
   font-size: 14px;
   line-height: 2;
 }
 
-.landing .change-background {
+#landing .change-background {
   color: #ddd;
   position: absolute;
   top: 50%;
@@ -281,15 +282,15 @@ nav ul li a.active {
   -o-transform: translateY(-50%);
 }
 
-.landing .change-background:nth-of-type(1) {
+#landing .change-background:nth-of-type(1) {
   left: 30px;
 }
 
-.landing .change-background:nth-of-type(2) {
+#landing .change-background:nth-of-type(2) {
   right: 30px;
 }
 
-.landing .bullets {
+#landing .bullets {
   display: flex;
   position: absolute;
   bottom: 30px;
@@ -301,7 +302,7 @@ nav ul li a.active {
   -o-transform: translateX(-50%);
 }
 
-.landing .bullets li {
+#landing .bullets li {
   width: 20px;
   height: 20px;
   margin: 0 5px;
@@ -313,20 +314,20 @@ nav ul li a.active {
   -o-border-radius: 50%;
 }
 
-.landing .bullets li.active {
+#landing .bullets li.active {
   background-color: var(--main-color);
   border: none;
 }
 
 @media (max-width: 767px) {
-  .landing .text {
+  #landing .text {
     width: 100%;
     justify-content: center;
   }
-  .landing .text .content {
+  #landing .text .content {
     width: 100%;
   }
-  .landing .change-background {
+  #landing .change-background {
     display: none;
   }
 }
@@ -377,9 +378,9 @@ nav ul li a.active {
 /* =============================== */
 
 /* ========== Section: Design ========== */
-.design {
+#design {
   background-color: var(--fallback-color);
-  background-image: url(/images/design-features.jpg);
+  background-image: url(../images/design-features.jpg);
   background-size: cover;
   position: relative;
   display: flex;
@@ -388,7 +389,7 @@ nav ul li a.active {
   height: 600px;
 }
 
-.design::before {
+#design::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -398,14 +399,14 @@ nav ul li a.active {
   left: 0;
 }
 
-.design img {
+#design img {
   position: relative;
   z-index: 2;
   bottom: -150px;
   margin: auto;
 }
 
-.design .text {
+#design .text {
   z-index: 2;
   color: white;
   background-color: var(--transparent-color);
@@ -414,17 +415,17 @@ nav ul li a.active {
   flex: 1;
 }
 
-.design .text h2 {
+#design .text h2 {
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
 
-.design .text ul li {
+#design .text ul li {
   margin: 30px 0;
 }
 
-.design .text ul li::before {
+#design .text ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f108";
   font-weight: 900;
@@ -434,10 +435,10 @@ nav ul li a.active {
 }
 
 @media (max-width: 767px) {
-  .design img {
+  #design img {
     display: none;
   }
-  .design .text {
+  #design .text {
     max-width: 100%;
   }
 }
@@ -584,8 +585,7 @@ nav ul li a.active {
 }
 
 #portfolio .more:hover {
-  filter: brightness(97%);
-  -webkit-filter: brightness(97%);
+  background-color: rgb(25, 186, 250);
 }
 
 #portfolio .more a {
@@ -608,11 +608,11 @@ nav ul li a.active {
 /* =============================== */
 
 /* ========== Section: Video ========== */
-.video {
+#video {
   position: relative;
 }
 
-.video::before {
+#video::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -622,11 +622,11 @@ nav ul li a.active {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.video video {
+#video video {
   width: 100%;
 }
 
-.video .text {
+#video .text {
   position: absolute;
   top: 50%;
   width: 100%;
@@ -640,18 +640,18 @@ nav ul li a.active {
   -o-transform: translateY(-50%);
 }
 
-.video .text h2 {
+#video .text h2 {
   text-transform: uppercase;
   color: white;
   font-weight: normal;
   margin: 0 0 30px;
 }
-.video .text p {
+#video .text p {
   margin-bottom: 30px;
   color: white;
 }
 
-.video button {
+#video button {
   background-color: black;
   color: white;
   border: none;
@@ -685,7 +685,7 @@ nav ul li a.active {
 #stats {
   padding: var(--section-padding) 0;
   background-color: var(--fallback-color);
-  background-image: url(/images/stats.png);
+  background-image: url(../images/stats.png);
   background-size: cover;
   position: relative;
 }
@@ -902,7 +902,7 @@ nav ul li a.active {
 /* ========== Section: Quote ========== */
 #quote {
   background-color: var(--fallback-color);
-  background-image: url(/images/quote.jpg);
+  background-image: url(../images/quote.jpg);
   background-size: cover;
   padding: var(--section-padding) 0;
   position: relative;
@@ -1038,18 +1038,47 @@ nav ul li a.active {
   display: block;
   margin: 20px auto 0;
   padding: 15px 30px;
-  background-color: var(--main-color);
   border: none;
+  background: none;
   color: white;
+  position: relative;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
+#pricing .container .contact-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+#pricing .container .contact-btn:hover::before {
+  width: 0;
+}
+
+#pricing .container .contact-btn:hover {
+  color: var(--main-color);
+}
 /* =============================== */
 
 /* ========== Section: Subscribe ========== */
 #subscribe {
   padding: var(--section-padding) 0;
   background-color: var(--fallback-color);
-  background-image: url(/images/subscribe.jpg);
+  background-image: url(../images/subscribe.jpg);
   background-size: cover;
   position: relative;
 }
@@ -1109,6 +1138,10 @@ nav ul li a.active {
   padding: 0 20px;
 }
 
+#subscribe form input[type="submit"]:hover {
+  background-color: rgb(25, 186, 250);
+}
+
 #subscribe p {
   line-height: 2;
 }
@@ -1162,6 +1195,10 @@ nav ul li a.active {
   margin-left: auto; */ /* This or float */
 }
 
+#contact form input[type="submit"]:hover {
+  background-color: rgb(25, 186, 250);
+}
+
 #contact .info {
   flex-basis: 25%;
 }
@@ -1200,7 +1237,7 @@ nav ul li a.active {
 /* ========== Footer ========== */
 body > footer {
   background-color: var(--fallback-color);
-  background-image: url(/images/subscribe.jpg);
+  background-image: url(../images/subscribe.jpg);
   background-size: cover;
   position: relative;
   color: white;
